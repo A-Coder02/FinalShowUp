@@ -1,0 +1,4 @@
+
+addcart.addEventListener('click',openCart)
+
+

@@ -1,0 +1,446 @@
+
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<!-- META TAGS -->
+		<meta name="name" content="TECH MECHANIC">
+		<meta name="description" content="DOCS OF YOUR MAHINES!">
+		<meta name="keywords" content="COMPUTER SHOP IN KONDHWA,COMPUTER SHOP IN KAMELA,COMPUTER SHOP IN PUNE">
+		<meta name="author" content="TECH MECHANIC">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		
+		<!-- CSS LOCAL -->
+		<link href = "style/style.css" rel = "stylesheet">
+		<link href = "style/producthover.css" rel = "stylesheet">
+		<link href = "style/index.css" rel = "stylesheet">
+		<link href = "style/responsive.css" rel = "stylesheet">
+		<link href = "style/cart.css" rel = "stylesheet">
+		<style>
+			@media only screen and (max-width:500px){
+				main {
+				padding: 0;
+				padding-top: 4rem;
+				}
+			}
+		</style>
+		<!-- SCRIPT LOCAL -->
+		<script src = "script/script.js"></script>
+		<script src = "script/cart.js"></script>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
+
+	
+		<!-- SCRIPT EXTERAL -->
+		<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+		
+	</head>
+	<body>
+	
+	
+					<!-- HEADER STARTED -->
+		
+		<header>
+				<!-- NAVLINKS -->
+				<!-- sidebar in mobile responsive -->
+			<ul class = "slider-menu" id = "sliderMenu">
+				
+				<a><i class="fas fa-search"></i><input type = "text" placeholder = "Search Products..."></a>
+				<a href = "processor.html">PROCESSOR</a>
+				<a href = "motherboard.html">MOTHERBOARD</a>
+				<a href = "laptop.html">lAPTOPS</a>
+				<a href = "networking.html">NETWORKING</a>
+				<a href = "accesories.html">ACCESSORIES</a>
+				<a href = "newin.html">NEW IN</a>
+				<a href = "service.html">SERVICES</a>
+				<a href = "all-products.html">ALL PRODUCTS</a>
+				<a class = "log-l" href = "login.html">LOGIN</a>
+				<a class = "log-l" href = "sign.html">CREATE ACCOUNT</a>
+				<a class = "log-l" href = "contact.html">CONTACT US</a>
+				
+				<div class = "aa1"></div>
+			</ul>
+			<div class = "overlay hidden">
+			</div>
+			
+			<!-- CART SECTION -->
+			<div class = "cart-section" id = "cart-slot">
+				<!-- CARD HAEDER -->
+				<section class = "cart-header">
+					<h3>Your Shopping Cart <br><small>(<span id = "cart-item-number">1</span> item)</small></h3>
+					<i id = "cart-close" class="fas fa-times" onclick = "closeCart()"></i>
+				</section>
+				<!-- CART LIST -->
+					<ul class = "cart-item-list" type  = "none">
+						<li class = "cart-item">
+							<img class  ="cart-item-img" src = "img/products/products-img/product-11.jpeg">
+							<p class = "cart-item-name">Leather MacPad</p><span class = "cart-item-close">Close<i class="fas fa-times"></i></span>
+							<p class = "cart-item-spec">WITH FELT PADDING 13" - 33.5 X 24 CM (13.1" X  9.4" INCHES) / Navy</p>
+							<div class = "cart-item-div">&#8377;<span class = "cart-item-price">6085</span> <span>Qty : <span class = "qty">1</span></span></div>
+						</li>
+						<li class = "cart-item">
+							<img class  ="cart-item-img" src = "img/products/products-img/product-21.jpeg">
+							<p class = "cart-item-name">Leather MacPad</p><span class = "cart-item-close">Close<i class="fas fa-times"></i></span>
+							<p class = "cart-item-spec">WITH FELT PADDING 13" - 33.5 X 24 CM (13.1" X  9.4" INCHES) / Navy</p>
+							<div class = "cart-item-div">&#8377;<span class = "cart-item-price">6085</span> <span>Qty : <span class = "qty">1</span></span></div>
+						</li>
+					</ul>
+					<!-- CART GIFT SELECTION WRAPPER -->
+					<div class = "for-a-gift-wrapper">
+						<label for = "giftWrap">
+							<input type = "checkbox" name = "giftWrap" id = "giftWrap" value ="" >
+							This is a gift (Free gift wrapping) <i class="fas fa-gift"></i>
+						</label>
+						<p>
+						<a style = "text-decoration:underline" onclick = "giftL()">Click Here</a> 
+						to leave a Gift Message or special instructions to seller.
+						</p>
+						<label for = "giftLabel">
+							<textarea name="note" maxlength="160" id="giftLabel" rows="2" cols="50"style="position:relative; margin: 5px 11.4444px 0px 0px; width: 100%; height: 58px;"></textarea>
+						</label>
+					</div>
+					<!-- CART CHECKOUT -->
+					<div class = "subtotal-div">
+						<h3>SubTotal<span style = "display:inline-block;padding-left:8rem;">Rs. <span class = "subtotal">9999</span></span></h3>
+						<div style = "padding-top:0em;display:flex;justify-content:center;font-size:0.7rem;">Free Shipping*  |  60 Days Returns  |  1 Year Warranty</div>
+							<button class  = "btns cart-btns">GO TO CHECKOUT</button>
+						<p>Taxes included, discounts applied at checkout.</p>
+						<span class = "checkout-cards">
+							<img src = "img/pay-options.jpg" >
+						</span>
+					</div>
+			</div>
+			<!-- SEARCHBOX-HIDDEN -->
+			
+				<!-- HEADER-ITEMS STARETED -->
+			<div class = "header-items header-items-top">
+			<div id = "search-box" class = "search-box">
+				<div>
+					<i class="fas fa-search"></i>
+					<input type = "text" placeholder = "Search Product...">
+					<i class="fas fa-times" onclick = "closeSearchBox()"></i>
+				</div>
+			</div>
+				<div class = "header-items-top-items" id = "search-products" onclick = "openSearchBox()">
+					<i class="fas fa-search"></i>Search
+				</div>
+				
+			<div class = "header-items-top-items">
+					
+						<ul>
+							<li><a href = "sign.html">Sign In</a></li>
+							<li><a href = "login.html">Create Account </a></li>
+							<li><a href = "contact.html">Contact Us</a></li>
+							<li  onclick = "openCart()" ><i class="fas fa-shopping-cart"><span id = "cart-icon-item-num">1</span></i></i></li>
+						</ul>
+					
+				</div>
+			</div>
+			<div class = "header-items header-items-bottom">
+				<div class = "header-items-bottom-items main-c">
+					<div>
+						<i id = "openSliderMenuButton"class="fas fa-bars hide-i" onclick = "openSliderMenu()"></i>
+						<i id = "closeSliderMenuButton"class="fas fa-times hide-i" onclick = "closeSliderMenu()"></i>
+					</div>
+					<a class = "tr" href = "index.html">TECH MECHANIC</a>
+					<a  onclick = "openCartM()" ><i class="fas fa-shopping-cart hide-i"><span id = "cart-icon-item-num">1</span></i></a>
+					
+				</div>
+				<div class = "header-items-bottom-items">
+						<!-- NAVLINKS STATIC -->
+					<ul class = "" style = "justify-content:center;"class = "navlinks">
+						<li class = "imp-links"><a href = "processor.html">PROCESSOR</a></li>
+						<li class = "imp-links">	<a href = "motherboard.html">MOTHERBOARD</a>	</li>	
+						<li class = "imp-links"><a href = "laptop.html">LAPTOPS</a></li>
+						<li class = "imp-links"><a href = "networking.html">NETWORKING</a></li>
+						<li class = "imp-links"><a href = "accesories.html">ACCESSORIES</a></li>
+						<li class = "imp-links"><a href = "service.html">SERVICES</a></li>
+						<li class = "nimp-links"><a href = "newin.html">NEW IN</a></li>
+						<li class = "nimp-links"><a href = "best-sellers.html">BEST SELLERS</a></li>
+						<li class = "nimp-links"><a href = "all-products.html">ALL PRODUCTS</a></li>
+					</ul>
+					
+				</div>
+			</div>
+			
+		</header>
+			<!-- SHOWS WHEN TOP UL WILL HIDE BECAUSE SOME BROWER DOSENT SUPPORTS STICKY POSITION -->
+					<!-- NAVLINKS FIXED -->
+					<ul class = "show-ul" style = "justify-content:center;"class = "navlinks">
+						<li class = "imp-links"><a href = "processor.html">PROCESSOR</a></li>
+						<li class = "imp-links"><a href = "motherboard.html">MOTHERBOARD</a></li>	
+						<li class = "imp-links"><a href = "laptop.html">LAPTOPS</a></li>
+						<li class = "imp-links"><a href = "networking.html">NETWORKING</a></li>
+						<li class = "imp-links"><a href = "accesories.html">ACCESSORIES</a></li>
+						<li class = "imp-links"><a href = "service.html">SERVICES</a></li>
+						<li class = "nimp-links"><a href = "newin.html">NEW IN</a></li>
+						<li class = "nimp-links"><a href = "best-sellers.html">BEST SELLERS</a></li>
+						<li class = "nimp-links"><a href = "all-products.html">ALL PRODUCTS</a></li>
+					</ul>
+					
+								<!-- HEADER ITEMS ENDED -->
+								
+								
+								
+								
+		<main>
+				<!-- BANNER START -->
+			<div class = "top-banner">
+				<div class = "img-banner">
+					 <video id = "vid1" class = "intro-video" width="500" height="281" autoplay muted loop>
+					<source src="back1.mp4" type="video/mp4" />
+					<source src="back1.ogv" type="video/ogg" />
+					<source src="back1.webm" type="video/webm" />
+				</video>
+				<script>
+					document.getElementById('vid1').currentTime = 50;
+				</script>
+				</div>
+				<section class = "content-banner">
+				<div>
+					<h1>Games have so much freedom. you can go anywhere you want.</h1>
+					<p>
+					WE BUILD GAMING CPU, ARCHITECTURE CPU WITH REQUIREMENTS & GREAT RIGS WITH
+					WARRENTY + GURANTEE
+						
+					</p>
+					</div>
+					<button class = "btns"><a href = "all-products.html">Shop Now</a></button>
+				</section>
+			</div>
+			<!-- BANNER END -->
+			<div class = "hr-line"></div>
+			
+			<!-- PRODUCTS WRAPPER START -->
+			<section class = "product-wrapper">
+				<!-- PRODUCT HEADER -->
+				<h1 class = "product-header">RECENT PRODUCTS</h1>
+				<!-- PRODUCT ITEMS -->
+				<div class = "product-flex">
+					<div class = "product-items">
+						<a href = "#">
+							<div style= "position:relative;">
+								<span class = "new-product" style = "display:flex;">NEW</span>
+								<img class = "show-img"src = "img/products/products-img/product-11.jpeg">
+								<img class = "hide-img" src = "img/products/products-img/product-12.jpeg">
+							</div>
+						<p>Gamer PC Intel Core i7 Upto 3.46GHz 8Threats 120GB SSD 1TB Hard Disk GT 710 2GB Graphic Card 19 INCH Full HD LED Monitor Gaming Keyboard Mouse</p>
+						<div class = "price">&#8377;<span>44999</span></div>
+						</a>
+					</div>
+					<div class = "product-items">
+						<a href = "#">
+						<div style = "position:relative;">
+						<span class = "new-product" style = "display:flex;">NEW</span>
+						<img class = "show-img" src = "img/products/products-img/product-21.jpeg">
+						<img class = "hide-img" src = "img/products/products-img/product-22.jpeg">
+						</div>
+						<p> Gaming PC - Intel Core i5 2400-8GB RAM - 1TB HDD - GT 710 2GB, Gaming Cabinet with 3 RGB Cooling Fan, RGB Strip Light (Core I5 2nd Gen)</p>
+						<div class = "price">&#8377;<span>29999</span></div>
+						</a>
+					</div>
+					<div class = "product-items">
+						<a href = "#">
+						
+						<div style = "position:relative;">
+						<span class = "new-product" style = "display:flex;">NEW</span>
+						<img class = "show-img" src = "img/products/products-img/product-31.jpeg">
+						<img class = "hide-img" src = "img/products/products-img/product-32.jpeg">
+						</div>
+						<p>CHIST Power Gamer PC Intel Core i7 Upto 3.46GHz 8Threats 120GB SSD 500GB Hard Disk GT 710 2GB Graphic Card 19 INCH Full HD LED Monitor</p>
+						<div class = "price">&#8377;<span>34999</span></div>
+						</a>
+					</div>
+				</div>
+			</section>
+			<!-- PRODUCT WARPPER END -->
+			
+			<!-- BOX START -->
+			<div class = "box">
+			
+			
+				<section class = "box-items" style = "background:url('img/box/box1.jpg');" >
+				<a href = "processor.html">
+				
+						<h2>Ultimate built CPUs for all your tech</h2>
+						<p>
+							CPU, motherboard, RAM & cases for Gaming, Architectures & Office work. Protect
+							your gear with head-turning covers that fit like a 
+							thermal pastes, all generations covered.
+						</p>
+		
+				</a>
+				</section>
+				<section class = "box-items" style = "background:url('img/box/box2.jpg');" >
+				<a href = "accesories.html">
+				
+						<h2>Carry your gear like never before</h2>
+						<p>
+							Constructed with durable materials and branded keyboards, mouses, mouse pad, camera and UPS.
+						</p>
+					
+				</a>
+				</section>
+				<section class = "box-items" style = "background:url('img/box/box3.jpg');" >
+				<a href = "laptop.html">
+				
+						<h2>Bloody worthy Laptops</h2>
+						<p>
+							Nicely priced for any occasion and in budget
+						</p>
+					
+				</a>
+				</section>
+				<section class = "box-items" style = "background:url('img/box/box4.jpg');" >
+				<a href = "gpu.html">
+				
+						<h2>Enhance performance with NVIDEA</h2>
+						<p>
+							All GPUs available with great prices and performances.
+						</p>
+					
+				</a>
+				</section>
+			</div>
+			<!-- BOX END -->
+			
+			<!-- BOTTOM BANNER -->
+			<section class = "banner">
+				
+					<h1 class = "banner-header" id = "banner-last-header">Exclusive Leather Quality Products, delivered real fast</h1>
+					<p class = "banner-paragraph" id = "banner-last-para">
+					Our leather goods are handcrafted using techniques passed from generation to generation and using 100% rich full grain leather.
+
+our dedication and experience help us create unique goodness in the work we make, and ensures your leather
+companion can last you a lifetime of happy service.
+					</p>
+				
+				
+			</section>
+			
+			<!-- FEATURES OF SHOP -->
+			
+		</main>
+			<!-- MAIN END AND FOOTER START -->
+		<footer>
+			<div class = "hr-line"></div>
+			</div>
+				<div class = "short">
+				<div class = "short-items">
+				<img src = "img/short/short1.jpeg">
+				<p>Worldwide Shipping</p>
+				</div>
+				<div class = "short-items">
+				<img src = "img/short/short2.jpeg">
+				<p>1 Year Warranty</p>
+				</div>
+				<div class = "short-items">
+				<img src = "img/short/short3.jpeg">
+				<p>Free Fast Shipping</p>
+				</div>
+				<div class = "short-items">
+				<img src = "img/short/short4.jpeg">
+				<p>60 Day Returns</p>
+				</div>
+			</div>
+			<section class = "subs">
+				<h3>DON'T MISS OUT NEW RELEASES & SUBSCRIBER EXCLUSIVES</h3>
+				<p>We won't spam you, that's a promise.</p>
+				<div class = "submit-email">
+					<input type = "search" placeholder = "email@example.com">
+					<button class = "btns">SUBMIT</button>
+				</div>
+				<p>
+				You are signing up to receive product updates and
+				newsletters, By signing up, you are consenting to our 
+				<a href = "">privacy policy</a> but you can opt out at any time.
+				</p>
+			</section>
+			
+			<div class = "footer-links">
+				<ul>
+					<li class = "link-heads"><a>Information</a></li>
+					<li><a href = "#">About Us</a></li>
+					<li><a href = "#">Delivery Information</a></li>
+					<li><a href = "#">Privacy Policy</a></li>
+					<li><a href = "#">Terms & Conditions</a></li>
+				</ul>
+				<ul>
+					<li class = "link-heads"><a>Customer Service</a></li>
+					<li><a href = "#">Contact Us</a></li>
+					<li><a href = "#">Returns</a></li>
+					<li><a href = "#">Site Map</a></li>
+				</ul>
+				<ul>
+					<li class = "link-heads"><a>Extras</a></li>
+					<li><a href = "#">Brands</a></li>
+					<li><a href = "#">Gift Certificates</a></li>
+					<li><a href = "#">Affiliate</a></li>
+					<li><a href = "#">Specials</a></li>
+				</ul>
+				<ul>
+					<li class = "link-heads"><a>My Account</a></li>
+					<li><a href = "#">My Account</a></li>
+					<li><a href = "#">Order History</a></li>
+					<li><a href = "#">Wish List</a></li>
+					<li><a href = "#">Newsletter</a></li>
+				</ul>
+			</div>
+			<hr>
+			<div class = "copyright">
+				<span>Powered By <a href = "index.html">Tech Mechanic</a></span>
+				<span><a href = "#">Tech Mechanic</a> © 2021</span>
+				<br>
+				<div class = "social-links">
+					<p>All rights reserved © 2021 Tech Mechanic Ltd</p>
+					<div>
+						<i class="fab fa-twitter"></i>
+						<i class="fab fa-facebook-square"></i>
+						<i class="fab fa-instagram"></i>
+						<i class="fab fa-pinterest"></i>
+					</div>
+				</div>
+			</div>
+			<!-- FIXED IN FOOTER -->
+			<section class  = "sub-alert" id = "subAlert">
+				<span class = "close-sub-alert" ><i id = "sub-alert-close" class="fas fa-times" onclick = "closeSubAlert()"></i></span>
+				<div style = "">
+					<h2 style = "color:gray;">Subscribe and get 10% Off your first order!</h2>
+					<p style = "color:gray;">Discount applied automatically.</p>
+					<p>Get better discounts and early access to new product launches and more!</p>
+				</div>
+				<div>
+					<div class = "submit-email">
+						<input type = "search" placeholder = "email@example.com">
+						<button class = "btns">SUBMIT</button>
+					</div>
+					<p style = "color:white;margin:0.4rem;margin-left:1rem;font-weight:400;">We won't spam you, that's a promise.</p>
+				</div>
+			</section>
+			<div class = "offer-bell-icon" id = "bellIcon">
+				<div>Get Updated with Latest Offers and Products</div>
+				<p><a href = "#">YES, PLEASE</a></p>
+				<span id = "qw" >
+					<i id = "openBell" class = "fas fa-bell" onclick = "bIcoSli()"></i>
+					<div class = "close-bell" id = "closeBell">
+						<i class="fas fa-times" onclick = "bIcoSli_Close()"></i>
+					</div>
+				</span>
+			</div>
+			<div class = "offer-bell-icon offer-bell-icon-M" id = "b2">
+				<div>Get Updated with Latest Offers and Products</div>
+				<p><a href = "#">YES, PLEASE</a></p>
+				<span id = "qw" >
+					<i  class = "fas fa-bell" ></i>
+					
+				</span>
+				<div class = "close-bell">
+					<i class="fas fa-times" onclick = "b2Nop()"></i>
+				</div>
+			</div>
+		</footer>
+		<!-- FOOTER END -->
+	</body>
+	
+</html>

@@ -1,0 +1,327 @@
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+	<!-- META TAGS -->
+		<meta name="name" content="TECH MECHANIC">
+		<meta name="description" content="DOCS OF YOUR MAHINES!">
+		<meta name="keywords" content="COMPUTER SHOP IN KONDHWA,COMPUTER SHOP IN KAMELA,COMPUTER SHOP IN PUNE">
+		<meta name="author" content="TECH MECHANIC">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<!-- CSS LOCAL -->
+		<link href = "style/style.css" rel = "stylesheet">
+		<link href = "style/producthover.css" rel = "stylesheet">
+		<link href = "style/product.css" rel = "stylesheet">
+		<link href = "style/product-item.css" rel = "stylesheet">
+		<link href = "style/index.css" rel = "stylesheet">
+		<link href = "style/responsive.css" rel = "stylesheet">
+		<link href = "style/cart.css" rel = "stylesheet">
+		<link href = "style/coursel.css" rel = "stylesheet">
+		
+		<!-- <link href = "style/p-item.css" rel = "stylesheet"> -->
+		<!-- SCRIPT LOCAL -->
+		<script src = "script/script.js"></script>
+		<script src = "script/cart.js"></script>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
+
+	
+		<!-- SCRIPT EXTERAL -->
+		<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+		<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+		<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+		
+	</head>
+	<body>
+		<!-- HEADER STARTED -->
+		<header>
+				<!-- NAVLINKS -->
+				<!-- sidebar in mobile responsive -->
+			<ul class = "slider-menu" id = "sliderMenu">
+				
+				<a><i class="fas fa-search"></i><input type = "text" placeholder = "Search Products..."></a>
+				<a href = "processor.html">PROCESSOR</a>
+				<a href = "motherboard.html">MOTHERBOARD</a>
+				<a href = "laptop.html">lAPTOPS</a>
+				<a href = "networking.html">NETWORKING</a>
+				<a href = "accesories.html">ACCESSORIES</a>
+				<a href = "newin.html">NEW IN</a>
+				<a href = "service.html">SERVICES</a>
+				<a href = "all-products.html">ALL PRODUCTS</a>
+				<a class = "log-l" href = "login.html">LOGIN</a>
+				<a class = "log-l" href = "sign.html">CREATE ACCOUNT</a>
+				<a class = "log-l" href = "contact.html">CONTACT US</a>
+				
+				<div class = "aa1"></div>
+			</ul>
+			<div class = "overlay hidden">
+			</div>
+			
+			<!-- CART SECTION -->
+			<div class = "cart-section" id = "cart-slot">
+				<!-- CARD HAEDER -->
+				<section class = "cart-header">
+					<h3>Your Shopping Cart <br><small>(<span id = "cart-item-number">1</span> item)</small></h3>
+					<i id = "cart-close" class="fas fa-times" onclick = "closeCart()"></i>
+				</section>
+				<!-- CART LIST -->
+					<ul class = "cart-item-list" type  = "none">
+						<li class = "cart-item">
+							<img class  ="cart-item-img" src = "img/products/products-img/product-11.jpeg">
+							<p class = "cart-item-name">Leather MacPad</p><span class = "cart-item-close">Close<i class="fas fa-times"></i></span>
+							<p class = "cart-item-spec">WITH FELT PADDING 13" - 33.5 X 24 CM (13.1" X  9.4" INCHES) / Navy</p>
+							<div class = "cart-item-div">&#8377;<span class = "cart-item-price">6085</span> <span>Qty : <span class = "qty">1</span></span></div>
+						</li>
+						<li class = "cart-item">
+							<img class  ="cart-item-img" src = "img/products/products-img/product-21.jpeg">
+							<p class = "cart-item-name">Leather MacPad</p><span class = "cart-item-close">Close<i class="fas fa-times"></i></span>
+							<p class = "cart-item-spec">WITH FELT PADDING 13" - 33.5 X 24 CM (13.1" X  9.4" INCHES) / Navy</p>
+							<div class = "cart-item-div">&#8377;<span class = "cart-item-price">6085</span> <span>Qty : <span class = "qty">1</span></span></div>
+						</li>
+					</ul>
+					<!-- CART GIFT SELECTION WRAPPER -->
+					<div class = "for-a-gift-wrapper">
+						<label for = "giftWrap">
+							<input type = "checkbox" name = "giftWrap" id = "giftWrap" value ="" >
+							This is a gift (Free gift wrapping) <i class="fas fa-gift"></i>
+						</label>
+						<p>
+						<a style = "text-decoration:underline" onclick = "giftL()">Click Here</a> 
+						to leave a Gift Message or special instructions to seller.
+						</p>
+						<label for = "giftLabel">
+							<textarea name="note" maxlength="160" id="giftLabel" rows="2" cols="50"style="position:relative; margin: 5px 11.4444px 0px 0px; width: 100%; height: 58px;"></textarea>
+						</label>
+					</div>
+					<!-- CART CHECKOUT -->
+					<div class = "subtotal-div">
+						<h3>SubTotal<span style = "display:inline-block;padding-left:8rem;">Rs. <span class = "subtotal">9999</span></span></h3>
+						<div style = "padding-top:0em;display:flex;justify-content:center;font-size:0.7rem;">Free Shipping*  |  60 Days Returns  |  1 Year Warranty</div>
+							<button class  = "btns cart-btns">GO TO CHECKOUT</button>
+						<p>Taxes included, discounts applied at checkout.</p>
+						<span class = "checkout-cards">
+							<!-- <img src = "img/pay-options.jpg" > -->
+						</span>
+					</div>
+			</div>
+			<!-- SEARCHBOX-HIDDEN -->
+			
+				<!-- HEADER-ITEMS STARETED -->
+			<div class = "header-items header-items-top">
+			<div id = "search-box" class = "search-box">
+				<div>
+					<i class="fas fa-search"></i>
+					<input type = "text" placeholder = "Search Product...">
+					<i class="fas fa-times" onclick = "closeSearchBox()"></i>
+				</div>
+			</div>
+				<div class = "header-items-top-items" id = "search-products" onclick = "openSearchBox()">
+					<i class="fas fa-search"></i>Search
+				</div>
+				
+			<div class = "header-items-top-items">
+					
+						<ul>
+							<li><a href = "sign.html">Sign In</a></li>
+							<li><a href = "login.html">Create Account </a></li>
+							<li><a href = "contact.html">Contact Us</a></li>
+							<li  onclick = "openCart()" ><i class="fas fa-shopping-cart"><span id = "cart-icon-item-num">1</span></i></i></li>
+						</ul>
+					
+				</div>
+			</div>
+			<div class = "header-items header-items-bottom">
+				<div class = "header-items-bottom-items main-c">
+					<div>
+						<i id = "openSliderMenuButton"class="fas fa-bars hide-i" onclick = "openSliderMenu()"></i>
+						<i id = "closeSliderMenuButton"class="fas fa-times hide-i" onclick = "closeSliderMenu()"></i>
+					</div>
+					<a class = "tr" href = "index.html">TECH MECHANIC</a>
+					<a  onclick = "openCartM()" ><i class="fas fa-shopping-cart hide-i"><span id = "cart-icon-item-num">1</span></i></a>
+					
+				</div>
+				<div class = "header-items-bottom-items">
+						<!-- NAVLINKS STATIC -->
+					<ul class = "" style = "justify-content:center;"class = "navlinks">
+						<li class = "imp-links"><a href = "processor.html">PROCESSOR</a></li>
+						<li class = "imp-links">	<a href = "motherboard.html">MOTHERBOARD</a>	</li>	
+						<li class = "imp-links"><a href = "laptop.html">LAPTOPS</a></li>
+						<li class = "imp-links"><a href = "networking.html">NETWORKING</a></li>
+						<li class = "imp-links"><a href = "accesories.html">ACCESSORIES</a></li>
+						<li class = "imp-links"><a href = "service.html">SERVICES</a></li>
+						<li class = "nimp-links"><a href = "newin.html">NEW IN</a></li>
+						<li class = "nimp-links"><a href = "best-sellers.html">BEST SELLERS</a></li>
+						<li class = "nimp-links"><a href = "all-products.html">ALL PRODUCTS</a></li>
+					</ul>
+					
+				</div>
+			</div>
+			
+		</header>
+			<!-- SHOWS WHEN TOP UL WILL HIDE BECAUSE SOME BROWER DOSENT SUPPORTS STICKY POSITION -->
+					<!-- NAVLINKS FIXED -->
+					<ul class = "show-ul" style = "justify-content:center;"class = "navlinks">
+						<li class = "imp-links"><a href = "processor.html">PROCESSOR</a></li>
+						<li class = "imp-links"><a href = "motherboard.html">MOTHERBOARD</a></li>	
+						<li class = "imp-links"><a href = "laptop.html">LAPTOPS</a></li>
+						<li class = "imp-links"><a href = "networking.html">NETWORKING</a></li>
+						<li class = "imp-links"><a href = "accesories.html">ACCESSORIES</a></li>
+						<li class = "imp-links"><a href = "service.html">SERVICES</a></li>
+						<li class = "nimp-links"><a href = "newin.html">NEW IN</a></li>
+						<li class = "nimp-links"><a href = "best-sellers.html">BEST SELLERS</a></li>
+						<li class = "nimp-links"><a href = "all-products.html">ALL PRODUCTS</a></li>
+					</ul>
+		<!-- HEADER ITEMS ENDED -->
+		<main>
+		
+					<div class = " product-main-para-head">
+					
+						<div class = "product-link-main">
+							<a href = "index.html">Home</a> > <a href = "">product-type</a>
+						</div>
+					</div>
+			<div class = "product-item-wrapper">
+				<div class = "product-image-wrapper">
+					<div class = "small-img-p">
+						<img class = "small-img" src = "img/pr/front.jpg">
+						<img class = "small-img" src = "img/pr/1.jpg">
+						<img class = "small-img" src = "img/pr/2.jpg">
+						<img class = "small-img" src = "img/pr/3.jpg">
+						<img class = "small-img" src = "img/pr/4.jpg">
+						<img class = "small-img" src = "img/pr/5.jpg">
+					</div>
+					<div class = "large-img-p">
+						<img class = "large-img" src = "img/pr/front.jpg">
+					</div>
+				</div>
+				<div class = "product-detail-wrapper">
+					<div class = "product-detail-header">
+						<h1 class = "product-name">HP 15 Thin & Light 15.6"(39.62cms) FHD Laptop</h1>
+						<p class = "product-shorts"> (11th Gen Intel Core i5-1135G7, 8GB DDR4, 1TB HDD, Windows 10 Home, MS Office, Integrated Graphics, FPR, Natural Silver, 1.76 Kg), 15s-du3032TU</p>
+						<div class = "rating-info">
+							
+								<div class  = "rating"><span class = "rating-count">1</span> Ratings</div>
+								<div class  = "stars"><span class = "star-count"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span></div>
+							
+						</div>
+						<div class = "p-price">
+							MRP <span class = "price">30000</span>
+						</div>
+						<div class = "product-specs">	
+							<h2>Product Specifications:</h2>
+							<div class = "product-spec-grid">
+								<div class = "product-spec-grid-item">
+									<p class = "product-spec-grid-item-name">Brand</p>
+									<p class = "product-spec-grid-item-detail">HP</p>
+								</div>
+								<div class = "product-spec-grid-item">
+									<p class = "product-spec-grid-item-name">Operating System</p>
+									<p class = "product-spec-grid-item-detail">Windows 10 Home</p>
+								</div>
+								<div class = "product-spec-grid-item">
+									<p class = "product-spec-grid-item-name">Processor</p>
+									<p class = "product-spec-grid-item-detail">i5-1135G7</p>
+								</div>
+							</div>
+							<div class = "product-detail-brief">
+								<p>
+								Processor: 11th Gen Intel Core i5-1135G7 (up to 4.2 GHz with Intel Turbo Boost Technology, 8 MB L3 cache, 4 cores)
+Operating System & Preinstalled Software: Windows 10 Home | Microsoft Office Home & Student 2019 | In the box: Laptop with included battery, charger
+Display: 15.6-Inch FHD IPS anti-glare micro-edge WLED-backlit, 250 nits, 45% NTSC (1920 x 1080)
+Memory & Storage: 8 GB DDR4-2666 SDRAM (2 x 4 GB), expandable upto 16 GB | 1TB HDD 5400 RPM, M.2 Slot free
+Graphics: Intel Iris Xe Graphics
+								</p>
+							</div>
+						</div>
+					</div>
+				
+				</div>
+					<div class = "product-price">
+						<div class = "share-links">
+						Share With: 
+							<nav>
+								<a href = "#"><i class="fab fa-whatsapp"></i></a>
+								<a href = "#"><i class="fab fa-facebook-f"></i></a>
+								<a href = "#"><i class="far fa-envelope"></i></a>
+							</nav>
+						</div>
+						<div class = "product-price-main">
+							<label for = "qty">
+								Quantity: 
+								<input type = "number"  id = "qty" value = "1" min = '1'>
+							</label>
+							<!-- <div class = "btns addtokart">ADD TO CART</div> -->
+							
+							<script src = "script/new.js">
+							</script>
+							<div class = "btns">BUY NOW</div>
+							
+						</div>
+					</div>
+			</div>
+			
+			
+			<div class = "pbi-wrapper">
+				<div class = "pbi-flex">
+					<div class = "pbi-flex-item">
+						<img src = "img/pbi/pbi-w1.jpg" >
+						<div>
+							<h3>Our Wallets</h3>
+							<p>
+							Thoughtfully designed to help you 
+							stash more cards, cash and coins in a 
+							slim silhouette without compromising
+							functionality.
+							</p>
+						</div>
+					</div>
+					<div class = "pbi-flex-item">
+						<img src = "img/pbi/pbi-w2.jpg" >
+						<div>
+							<h3>Enjoy smooth travel</h3>
+							<p>
+							Swift accessibility and say good bye to
+							bulky pockets. Our Wallets are designed for
+							comfort and to adapt to your every day lifestyle.
+							</p>
+						</div>
+					</div>
+					<div class = "pbi-flex-item">
+						<img src = "img/pbi/pbi-w3.jpg" >
+						<div>
+							<h3>Clever wallet architecture</h3>
+							<p>
+							Ensures a Super Slim Wallet design 
+							that is compact, functional and uncompromised.
+							</p>
+						</div>
+					</div>
+					<div class = "pbi-flex-item">
+						<img src = "img/pbi/pbi-w4.jpg" >
+						<div>
+							<h3>RFID Wallets</h3>
+							<p>
+							 whether you're planning a short city break
+							or commuting to work, our RFID protected
+							wallets let you have a smooth ride anywhere
+							you go.
+							</p>
+						</div>
+					</div>
+				</div>
+				<section class = "pbi-para" style = "text-align:center;margin-bottom:2rem;">
+					<h3 style = "padding:1rem">Unique Leather Wallets</h3>
+					<p>
+					Timeless aesthetics and hard-wearing, responsibly sourced materials are the cornerstone of our designs.
+
+All our wallets allow you to stash your cards, cash and coins in a slim silhouette without compromising their essence, allowing you to enjoy 
+smooth travel, freeing your pockets from clutter and adapting to your every day lifestyle.</p>
+				</section>
+			</div>
+		</main>
+			<!-- MAIN END AND FOOTER START -->
+			<!-- FOOTER END -->
+	</body>
+	
+</html>
